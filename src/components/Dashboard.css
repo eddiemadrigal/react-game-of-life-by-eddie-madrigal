@@ -1,0 +1,11 @@
+.main-container {
+    width: 90%;
+    margin: 10px auto;
+    border: 1px solid black;
+    min-height: 400px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+}
