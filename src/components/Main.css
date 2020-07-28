@@ -48,3 +48,7 @@ h1, h2 {
 h4 {
     margin-top: 0px;
 }
+
+.button {
+    text-align: center;
+}
