@@ -4,11 +4,24 @@ import Grid from './Grid';
 
 const Main = () => {
 
-    let speed = 500;
-    let rows = 30;
-    let cols = 50;
+    let sm = window.matchMedia('(max-width: 500px)');
+    let md = window.matchMedia('(max-width: 800px)');
+    function checkMedia() {
+        if (sm.matches === true) {
+            return 30;
+        } else if (md.matches === true) {
+            return 40;
+        }
+        else {
+            return 50;
+        }
+    }
+    
 
-    const [generations, setGenerations] = useState(-1);
+    let rows = 30;
+    let cols = checkMedia()
+
+    const [generations, setGenerations] = useState(0);
     const [gridFull, setGridFull] = useState(Array(rows).fill().map(() => Array(cols).fill(false)));
 
     function arrayClone(arr) {
@@ -75,7 +88,6 @@ const Main = () => {
                 cols={cols}
                 selectBox={selectBox}
             />
-            <p>Speed: {speed}</p>
             
         </div>
     )
