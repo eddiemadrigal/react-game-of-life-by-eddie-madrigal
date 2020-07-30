@@ -8,9 +8,9 @@ const Main = () => {
     let md = window.matchMedia('(max-width: 800px)');
     function checkMedia() {
         if (sm.matches === true) {
-            return 30;
+            return 20;
         } else if (md.matches === true) {
-            return 40;
+            return 35;
         }
         else {
             return 50;
