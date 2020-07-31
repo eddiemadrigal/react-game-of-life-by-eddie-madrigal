@@ -8,11 +8,12 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
 import Main from './Main';
+import Info from './Info';
 import './Dashboard.css';
 
 function Copyright() {
     return (
-      <Typography variant="body2" align="center">
+      <Typography variant="body2" align="center">        
         {'Copyright © '}
         <Link color="inherit" href="https://eddiemadrigal.net/">
           Eddie Madrigal's Version of Game of Life
@@ -111,13 +112,14 @@ function Copyright() {
               {/* Game Main Area */}
               <Grid item xs={12}>
                 <Paper className={classes.paper} style={{padding: 0, marginTop: "-30px"}}>
-                  <Main />
+                  <Main />   
+                  <Info />               
                 </Paper>
               </Grid>
             </Grid>
             <Box pt={4}>
               <Copyright />
-            </Box>
+            </Box>            
           </Container>
         </main>
       </div>
